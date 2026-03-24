@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 42 30% 97%;
+    --foreground: 150 25% 12%;
+
+    --card: 42 25% 95%;
+    --card-foreground: 150 25% 12%;
+
+    --popover: 42 30% 97%;
+    --popover-foreground: 150 25% 12%;
+
+    --primary: 152 45% 28%;
+    --primary-foreground: 42 30% 97%;
+
+    --secondary: 38 35% 88%;
+    --secondary-foreground: 150 25% 12%;
+
+    --muted: 42 20% 92%;
+    --muted-foreground: 150 10% 45%;
+
+    --accent: 80 40% 45%;
+    --accent-foreground: 42 30% 97%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 42 30% 97%;
+
+    --border: 42 20% 88%;
+    --input: 42 20% 88%;
+    --ring: 152 45% 28%;
+
+    --radius: 0.75rem;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 38 92% 14%;
+    --success: 152 60% 36%;
+    --success-foreground: 42 30% 97%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(152 45% 28%), hsl(80 40% 45%));
+    --gradient-card: linear-gradient(160deg, hsl(42 25% 95%), hsl(42 30% 97%));
+    --shadow-soft: 0 4px 24px -4px hsl(152 45% 28% / 0.1);
+    --shadow-elevated: 0 12px 40px -8px hsl(152 45% 28% / 0.15);
+
+    --font-display: 'DM Serif Display', serif;
+    --font-body: 'DM Sans', sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 150 20% 8%;
+    --foreground: 42 25% 92%;
+    --card: 150 18% 12%;
+    --card-foreground: 42 25% 92%;
+    --popover: 150 20% 8%;
+    --popover-foreground: 42 25% 92%;
+    --primary: 152 45% 42%;
+    --primary-foreground: 150 20% 8%;
+    --secondary: 150 15% 18%;
+    --secondary-foreground: 42 25% 92%;
+    --muted: 150 15% 18%;
+    --muted-foreground: 42 15% 55%;
+    --accent: 80 35% 50%;
+    --accent-foreground: 150 20% 8%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 42 25% 92%;
+    --border: 150 15% 20%;
+    --input: 150 15% 20%;
+    --ring: 152 45% 42%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+  }
+}
